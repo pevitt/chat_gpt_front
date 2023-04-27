@@ -7,6 +7,7 @@
                     type="email"
                     name="email"
                     class="input" 
+                    [ngClass]="{'is-danger': (!getControl('email').valid && getControl('email').dirty)}"
                     formControlName="email"
                 />
             </div>
@@ -18,6 +19,7 @@
                     type="password"
                     name="password"
                     class="input" 
+                    [ngClass]="{'is-danger': (!getControl('password').valid && getControl('password').dirty)}"
                     formControlName="password"
                 />
             </div>
@@ -25,7 +27,8 @@
         <button 
             type="submit"
             class="button is-info is-fullwidt"
-            [ngClass]="{ 'is-loading': isLoading }" >
+            [ngClass]="{ 'is-loading': isLoading }" 
+            [disabled]="loginForm.invalid" >
             Ingresar
         </button>
         <p class="error has-text-danger mt-4" *ngIf="isErrors.form">

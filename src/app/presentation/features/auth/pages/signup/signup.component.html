@@ -8,6 +8,7 @@
                     name="email"
                     class="input" 
                     formControlName="email"
+                    [ngClass]="{'is-danger': (!getControl('email').valid && getControl('email').dirty)}"
                 />
             </div>
         </div>
@@ -19,6 +20,7 @@
                     name="first_name"
                     class="input" 
                     formControlName="first_name"
+                    [ngClass]="{'is-danger': (!getControl('first_name').valid && getControl('first_name').dirty)}"
                 />
             </div>
         </div>
@@ -30,6 +32,7 @@
                     name="last_name"
                     class="input" 
                     formControlName="last_name"
+                    [ngClass]="{'is-danger': (!getControl('last_name').valid && getControl('last_name').dirty)}"
                 />
             </div>
         </div>
@@ -41,6 +44,7 @@
                     name="password"
                     class="input" 
                     formControlName="password"
+                    [ngClass]="{'is-danger': (!getControl('password').valid && getControl('password').dirty)}"
                 />
             </div>
         </div>
@@ -57,7 +61,8 @@
         <button 
             type="submit"
             class="button is-info is-fullwidt"
-            [ngClass]="{ 'is-loading': isLoading }" >
+            [ngClass]="{ 'is-loading': isLoading }" 
+            [disabled]="signupForm.invalid" >
             Registrarme
         </button>
         <p class="error has-text-danger mt-4" *ngIf="isErrors.form">

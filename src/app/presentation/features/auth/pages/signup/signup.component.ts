@@ -42,6 +42,10 @@ export class SignupComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {}
 
+  getControl(controlName)
+  {
+    return this.signupForm.get(controlName);
+  }
 
   onSubmitForm(){
     this.isLoading = true;

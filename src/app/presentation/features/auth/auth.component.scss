@@ -1,0 +1,72 @@
+.auth{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(2, 50%);
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        .bot{
+            width: 285px;
+            img{
+                width: inherit;
+            }
+        }
+        .text{
+            text-align: center;
+            h1{
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card{
+            width: 100%;
+            max-width: 594px;
+            padding: 4rem;
+            
+            border-radius: 5px 5px 5px 5px;
+            
+            .logo{
+                width: 79px;
+                margin: 0 auto;
+                margin-bottom: 1rem;
+                img{
+                    width: inherit;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .auth{
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(2, 50%);
+        &__left {
+            width: 100%;
+            padding: 1rem;
+            .bot {
+              width: 120px;
+            }
+            .text { 
+                h1 {
+                    font-size: 1.1rem;
+                }
+                p{
+                    font-size: 0.8rem;
+                } 
+            }
+        } 
+        &__right {
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+}

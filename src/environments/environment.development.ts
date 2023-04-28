@@ -4,4 +4,5 @@ export const environment = {
   loginPath: 'auth/login',
   signPath: 'auth/signup',
   profilePath: 'auth/profile',
+  requestMessage: 'messages/',
 };

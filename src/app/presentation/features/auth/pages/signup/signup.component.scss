@@ -1,0 +1,12 @@
+.form{
+    .field{
+        label.checkbox{
+            text-align: justify;
+        }
+    }
+    &__footer{
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+}
